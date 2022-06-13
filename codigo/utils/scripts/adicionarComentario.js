@@ -18,9 +18,8 @@ const criaComentario = (nome, comentario, jogo, id) => {
   const nomePrimeiraLetra = nome.charAt(0)
   const nomeResto = nome.substring(1)
 
-  caixaComentario.classList.add('col-md');
+  caixaComentario.classList.add('col-6');
   caixaComentario.classList.add('instancia_comentarios');
-  caixaComentario.classList.add('mb-4')
 
   caixaComentario.innerHTML = `
     <div class="area_comentarios">
@@ -52,66 +51,6 @@ const limparComentarios = () => {
 }
 
 const atualizarTela = (jogo) => {
-  let jogo_info = sessionStorage.getItem('jogo_page_info')
-  const descricao_jogo = document.getElementById('descricao_jogo');
-  const imagem_jogo = document.getElementById('imagem_jogo');
-  const so_jogo_minimos = document.getElementById('so_jogo_minimos');
-  const processador_jogo_minimos = document.getElementById('processador_jogo_minimos');
-  const memoria_jogo_minimos = document.getElementById('memoria_jogo_minimos');
-  const placavideo_jogo_minimos = document.getElementById('placavideo_jogo_minimos');
-  const rede_jogo_minimos = document.getElementById('rede_jogo_minimos');
-  const armazenamento_jogo_minimos = document.getElementById('armazenamento_jogo_minimos');
-
-  const so_jogo_recomendados = document.getElementById('so_jogo_recomendados');
-  const processador_jogo_recomendados = document.getElementById('processador_jogo_recomendados');
-  const memoria_jogo_recomendados = document.getElementById('memoria_jogo_recomendados');
-  const placavideo_jogo_recomendados = document.getElementById('placavideo_jogo_recomendados');
-  const rede_jogo_recomendados = document.getElementById('rede_jogo_recomendados');
-  const armazenamento_jogo_recomendados = document.getElementById('armazenamento_jogo_recomendados');
-
-  const nome_jogo = document.getElementById('nome_jogo');
-
-  jogo_info = JSON.parse(jogo_info)
-
-  descricao_jogo.innerHTML = jogo_info.descricao;
-  imagem_jogo.src = jogo_info.img
-  so_jogo_minimos.innerHTML = jogo_info.req_minimos.so;
-
-  processador_jogo_minimos.innerHTML = jogo_info.req_minimos.processador;
-  memoria_jogo_minimos.innerHTML = jogo_info.req_minimos.memoria;
-  placavideo_jogo_minimos.innerHTML = jogo_info.req_minimos.video;
-  rede_jogo_minimos.innerHTML = jogo_info.req_minimos.rede;
-  armazenamento_jogo_minimos.innerHTML = jogo_info.req_minimos.armazenamento;
-
-  so_jogo_recomendados.innerHTML = jogo_info.req_recomendados.so
-  processador_jogo_recomendados.innerHTML = jogo_info.req_recomendados.processador;
-  memoria_jogo_recomendados.innerHTML = jogo_info.req_recomendados.memoria;
-  placavideo_jogo_recomendados.innerHTML = jogo_info.req_recomendados.video;
-  rede_jogo_recomendados.innerHTML = jogo_info.req_recomendados.rede;
-  armazenamento_jogo_recomendados.innerHTML = jogo_info.req_recomendados.armazenamento;
-
-  if(nome_jogo.childNodes.length === 0) {
-    var words = jogo_info.nome.split(" ");
-    for (var i = 0; i < words.length - 1; i++) {
-        words[i] += " ";
-    }
-
-    words.forEach(palavra => {
-      console.log(palavra)
-      let primeira_letra = palavra.charAt(0);
-  
-      let span = document.createElement('span');
-      nome_jogo.appendChild(span);
-      span.classList.add('letra');
-  
-      span.innerHTML = primeira_letra;
-  
-      let resto_palavra = palavra.substring(1);
-      resto_palavra = resto_palavra.replace(/`/g, "'")
-      nome_jogo.innerHTML += resto_palavra + ' ';
-    });
-  }
-
   limparComentarios();
   const comentario = getComentario();
   comentario.forEach((item) => {
@@ -121,19 +60,7 @@ const atualizarTela = (jogo) => {
   });
 }
 
-const carregarComentarios = () => {
-  let jogo_info = sessionStorage.getItem('jogo_page_info')
-  jogo_info = JSON.parse(jogo_info)
-
-  console.log(jogo_info.comentario)
-
-  atualizarTela(jogo_info.comentario);
-}
-
-const inserirComentario = () => {
-  let jogo_info = sessionStorage.getItem('jogo_page_info')
-  jogo_info = JSON.parse(jogo_info)
-
+const inserirComentario = (jogo) => {
   const instanceNome = document.getElementById('nomeInput');
   const instanceComentario = document.getElementById('comentarioInput');
 
@@ -142,7 +69,7 @@ const inserirComentario = () => {
   const comentario = {
     nome: instanceNome.value,
     comentario: instanceComentario.value,
-    tela: jogo_info.comentario,
+    tela: jogo,
   }
 
   instanceNome.value = '';
@@ -151,7 +78,7 @@ const inserirComentario = () => {
   comentariosLocalStorage.push(comentario);
 
   setComentario(comentariosLocalStorage);
-  atualizarTela(jogo_info.comentario);
+  atualizarTela(jogo);
 }
 
 const removeComentario = (jogo, id) => {

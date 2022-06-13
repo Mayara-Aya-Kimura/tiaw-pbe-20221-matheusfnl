@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 
+/*Definição dos parâmetros pro dark-mode w light-mode*/
+:root {
+    --secondary-color: white;
+    --header-color: #151C35;
+    --background: url('./imagens/background.png');
+
+}
+
+.dark-mode {
+    --secondary-color: black;
+    --header-color: #a6adc4;
+    --background: url('./imagens/background5.jpg');
+}
+
 .container-fluid {
     font-family: 'Anton';
-    background-color: #151C35;
+    background-color: var(--header-color);
     margin-top: 0;
 }
 
@@ -26,8 +40,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    height: 100%;
     margin: 0;
+    margin-top: -9px;
 }
 
 .quiz-container {
@@ -36,7 +51,7 @@ body {
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 600px;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

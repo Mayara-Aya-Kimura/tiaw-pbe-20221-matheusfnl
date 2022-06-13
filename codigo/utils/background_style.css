@@ -2,36 +2,10 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
 }
 
 body {
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   background-image: url("imagens/background.png");
-}
-
-.loader {
-  background: #000 url(../utils/imagens/preloader.gif) no-repeat center center;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader.hidden {
-  animation: fadeOut .5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
 }

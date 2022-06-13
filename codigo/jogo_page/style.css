@@ -72,10 +72,6 @@
   padding: 15px;
 }
 
-.instancia_comentarios {
-  min-width: 320px;
-}
-
 .coment_desc {
   margin: 0;
   font-family: 'lato';
@@ -89,8 +85,6 @@
 .escrever_coment {
   width: 100%;
   background-color: #0c0d22;
-  border: 1px solid black;
-  color: white;
 }
 
 .enviar_coment {

@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap%27');
 
+/*Definição dos parâmetros pro dark-mode w light-mode*/
+:root {
+    --secondary-color: white;
+    --header-color: #151C35;
+    --background: url('./imagens/background.png');
+
+}
+
+.dark-mode {
+    --secondary-color: black;
+    --header-color: #a6adc4;
+    --background: url('./imagens/background5.jpg');
+}
+
 .container-fluid {
     font-family: 'Anton';
-    background-color: #151C35;
-    margin-top: 0;
+    background-color: var(--header-color);
+
 }
 
 
@@ -18,16 +32,10 @@
 }
 
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-
-
 body {
     width: 100%;
     height: 100%;
+    margin-top: -9px;
 }
 
 
@@ -58,4 +66,18 @@ canvas {
 .botao a:hover {
     background-color: rgb(226, 143, 42);
     color: black;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+ul li label {
+    cursor: pointer;
 }

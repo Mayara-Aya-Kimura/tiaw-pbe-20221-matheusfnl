@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Games Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../utils/header_style.css" />
+    <link rel="stylesheet" href="../utils/background_style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../utils/imagens/mini-logo.png" type="image/x-icon">
+  </head>
+  <body>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Games Guide</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../utils/header_style.css" />
-  <link rel="stylesheet" href="../utils/background_style.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="../utils/imagens/mini-logo.png" type="image/x-icon">
-</head>
+        <nav class="navbar navbar-expand-lg navbar-light bg">
+          <div class="container-fluid">
+            <a href="./index.html" class="header_logo"> <img src="../utils/imagens/logo.png" alt="logo_games_guide" class="logo-image" />
+            <a class="navbar-brand text-warning">Games Guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="../catalogo_page/index.html">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white " href="../rpg_mesa_page/index.html">RPG de Mesa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="../about_us_page/index.html">Sobre Nós</a>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link disabled"></a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar Jogos" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+              </form> 
+            </div>
+          </div>
+        </nav>
 
-<body>
-  <div class="main-content font-family-anton">
-    <div class="row text-center">
-      <div class="col-12 col-lg-6 col-xl-6">
-        <h1 class="text-white boas-vindas">
-          Boas-vindas ao <br />
-          <span class="letra">G</span>ames <span class="letra">G</span>uide! <br>
-        </h1>
+    <div class="main-content font-family-anton">
+      <div class="row text-center">
+        <div class="col-12 col-lg-6 col-xl-6">
+          <h1 class="text-white boas-vindas">
+            Boas-vindas ao <br />
+            <span class="letra">G</span>ames <span class="letra">G</span>uide! <br>
+          </h1>
 
-        <p class="guia text-white fs-4 text-center"><br><br>O melhor guia para te auxiliar no que jogar, baseado em você</p>
+          <p class="guia text-white fs-4"><br><br>O melhor guia para te auxiliar no que jogar, baseado em você</p>
 
-        <a href="../login-register_page/index.html">
-        <a href="../catalogo_page/index.html">
-        <button type="button" class="btn btn-warning comeceagora">Comece Agora</button> </a>
-      </div>
+          <a href="../login-register_page/index.html">
+          <button type="button" class="btn btn-warning comeceagora">Comece Agora</button> </a>
+        </div>
 
-      <div class="col-12 col-lg-6 col-xl-6 text-center">
-        <a href="../Snake_game/index.html"><img class="img-persona img-fluid" src="../utils/imagens/persona.png"
-            alt="persona_games_guide_default" /></a>
+        <div class="col-12 col-lg-6 col-xl-6 text-center">
+          <a href="../Snake_game/index.html"><img class="img-persona img-fluid" src="../utils/imagens/persona.png" alt="persona_games_guide_default"/></a>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

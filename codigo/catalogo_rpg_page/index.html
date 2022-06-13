@@ -7,54 +7,51 @@
     <link rel="stylesheet" href="../utils/header_style.css" />
     <link rel="stylesheet" href="../utils/background_style.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="../utils//scripts/logout.js"></script>
-    <link rel="stylesheet" href="../utils/styles/pesquisarJogos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="loader"></div>
-     <!-- Header -->
-     <nav class="navbar navbar-expand-lg navbar-light bg">
-      <div class="container-fluid">
-        <a href="./index.html" class="header_logo"> <img src="../utils/imagens/logo.png" alt="logo_games_guide" class="logo-image" />
-        <a class="navbar-brand text-warning">Games Guide</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="../home_page/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="../catalogo_page/index.html">Catálogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white " href="../rpg_mesa_page/index.html">RPG de Mesa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="../about_us_page/index.html">Sobre Nós</a>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link disabled"></a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <input autocomplete="off" id="pesquisa" onfocus="pesquisarJogos()" onblur="removerJogos()" class="form-control me-2 position-relative" type="text" placeholder="Pesquisar Jogos" aria-label="Search" on>
-            <div class="row position-absolute mt-5" id="previewJogos"></div>
-          </div> 
-          <button class="btn btn-outline-danger" onclick="logoutUser()">Sair</button>
-        </div>
+   <!-- Header -->
+   <nav class="navbar navbar-expand-lg navbar-light bg">
+    <div class="container-fluid">
+      <a href="./index.html" class="header_logo"> <img src="../utils/imagens/logo.png" alt="logo_games_guide" class="logo-image" />
+      <a class="navbar-brand text-warning">Games Guide</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="../home_page/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../catalogo_page/index.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="../rpg_mesa_page/index.html">RPG de Mesa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="../about_us_page/index.html">Sobre Nós</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link disabled"></a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar Jogos" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form> 
       </div>
-    </nav>
-    <!-- Fim do header -->
+    </div>
+  </nav>
+
+  <!-- Fim do Header -->
 
     <div id="main_content">
       <div class="row row-cols-1 row-cols-md-6 g-4 text-center">
         <div class="col">
           <div class="card">
-            <img src="imagens/d_d.png" class="card-img-top" alt="..." />
+            <img src="imagens/d&d.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Dungeons & Dragons</h5>
             </div>
@@ -78,7 +75,7 @@
         </div>
         <div class="col">
           <div class="card">
-            <img src="imagens/m_m.png" class="card-img-top" alt="..." />
+            <img src="imagens/m&m.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Mutantes e Malfeitores</h5>
             </div>
@@ -108,7 +105,7 @@
           <h3><span class="letra">D</span>ungeons & <span class="letra">D</span>ragons</h3>
           <div class="row mt-3">
             <div class="col-4">
-              <img class="img-fluid" src="imagens/d_d-capa.png" alt="Capa D&D" />
+              <img class="img-fluid" src="imagens/d&d-capa.png" alt="Capa D&D" />
             </div>
             <div class="col-8">
               <p>
@@ -173,22 +170,11 @@
           </div>
       </div>
     </div>
-
     <footer class="bg-light text-center text-lg-start">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: #0c1020; color: white;">
         Copyright © 2022 | Disciplina de Trabalho Interdisciplinar: Aplicações WEB | <b>PUC Minas Betim </b>| Mechanics Guide
       </div>
       <!-- Copyright -->
-    </footer>
-
-    <script>
-      window.addEventListener("load", function () {
-          const loader = document.querySelector(".loader");
-          loader.className += " hidden";
-      });
-    </script> 
-
-    <script src="../utils//scripts/pesquisarJogos.js"></script>
   </body>
 </html>

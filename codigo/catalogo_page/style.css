@@ -24,15 +24,10 @@
   margin: 10px;
 }
 
-#main_content {
-  margin: 50px 20px;
-}
-
 .catalogo {
   font-size: 55px;
   color: white;
   font-family: 'anton';
-  margin-top: -15px;
 }
 
 .letra {
@@ -40,14 +35,7 @@
 }
 
 .estrela {
-  font-size: 25px;
-  margin-top: 0px;
-  color: yellow;
-}
-
-.card_content {
-  margin: 10px;
-  color: white;
+  font-size: 30px;
 }
 
 .categorias {
@@ -58,64 +46,19 @@
   margin-bottom: 10px;
   margin-left: 20px;
   color: white;
-  border: 1px solid rgba(61, 61, 61, 0);
+  border: 1px solid rgb(61, 61, 61);
   background-color: #273257;
   font-family: 'Anton';
-}
-
-.categorias:hover {
-  background-color: #3c4973;
-}
-
-.selected {
-  background-color: #48588a;
 }
 
 .persona {
   width: 500px;
 }
 
-.card_instance {
+#card {
   background-color: #273257;
-  margin: 20px 0px 0px 0px;
-  min-height: 320px;
-  transition: all .3s;
-  box-shadow: 0px 0px 10px 1px rgba(18, 25, 41, 0.9);
-  border-radius: 5px 5px 0px 0px;
+  margin: 20px;
 }
-
-#card_row {
-  padding: 0px 20px;
-}
-
-.game_image {
-  border-radius: 5px;
-}
-
-#card_efeito {
-  transition: .3s;
-}
-
-#card_efeito:hover {
-  -webkit-transform: scale(1.03);
-  -moz-transform: scale(1.03);
-  -o-transform: scale(1.03);
-  transform: scale(1.03);
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-}
-
-.cursor_ponteiro  {
-  cursor: pointer;
-  min-width: 300px;
-}
-
-.card_avaliacao {
-  background-color: #273257;
-  margin: 0px 0px 0px 0px;
-  transition: all .3s;
-  box-shadow: 0px 0px 10px 1px rgba(18, 25, 41, 0.9);
-  border-radius: 0px 0px 5px 5px;}
 
 .link{
   text-decoration: none;
@@ -123,13 +66,14 @@
 
 .descricao {
   text-align: justify;
-  font-size: 13px;
-  padding-bottom: 10px;
-  margin: 0px;
-  color:  #ebecef;
 }
 
 p{
   text-align: center;
+  color: white;
+}
+
+.card_content {
+  margin: 10px;
   color: white;
 }

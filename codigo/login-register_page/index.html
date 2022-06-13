@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <title>Games Guide</title>
@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="../utils/header_style.css">
     <link rel="stylesheet" href="../utils/background_style.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-     <!-- Header -->
-     <nav class="navbar navbar-expand-lg navbar-light bg">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg">
       <div class="container-fluid">
         <a href="./index.html" class="header_logo"> <img src="../utils/imagens/logo.png" alt="logo_games_guide" class="logo-image" />
         <a class="navbar-brand text-warning">Games Guide</a>
@@ -30,7 +31,7 @@
               <a class="nav-link text-white " href="../rpg_mesa_page/index.html">RPG de Mesa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="index.html">Sobre Nós</a>
+              <a class="nav-link text-white" href="../about_us_page/index.html">Sobre Nós</a>
             </li>
            
             <li class="nav-item">
@@ -45,39 +46,28 @@
       </div>
     </nav>
     <!-- Fim do header -->
-    <div class="title">
-      <h1 class="text-center" style="font-family: 'anton';"><span class="letra">S</span>obre <span class="letra">N</span>ós</h1>
-    </div>
-    <div class="about_us_content">
-      <p class="md-3">
-        Em 2022, a Mechanics Guide Chanel foi fundada por Heitor Freitas, Leonardo Oliveira, Maria Luisa, Matheus
-        Gabriel, Mayara Kimura e Víctor Cutrim. A MECG criou o Games Guide, plataforma para recomendações de jogos. </p>
-
-      <img class="imagem_centro mt-5 mx-auto d-block img-fluid" src="./imagens/imagem3.jpg" alt="sobre_nos_imagem">
-
-      <div class="row mt-5">
-        <div class="col-2">
-          <img class="imagem_sobre_nos img-fluid" src="../utils/imagens/persona.png" alt="sobre_nos_imagem">
-        </div>
-        <div class="col-10">
-          Após um mapeamento ao entrevistar diversas pessoas, decidimos criar o Games Guide para você, gamer, 
-          que precisa de uma ajudinha porque está em dúvida ao decidir qual jogo é melhor de acordo com os seus interesses pessoais.</div>
-      </div>  
-
-      <div class="row mt-5">
-        <div class="col-10">
-          O nosso catálogo oferece diversas categorias de jogos como: FPS, MOBA, RPG, Terror. Os jogos possuem descrições,
-           avaliações, fotos, requisitos mínimos e recomendados para que você possa usufruir de uma boa gameplay.     </div>
-        <div class="col-2">
-          <img class="imagem_sobre_nos img-fluid" src="../utils/imagens/logo.png" alt="sobre_nos_imagem">
-        </div>
+    <div id="form">
+      <div class="options">
+        <p onclick="showLoginForm()">Login</p>
+        /
+        <p onclick="showRegisterForm()">Cadastrar</p>
       </div>
+      <form action="" method="post">
+        <div class="imgcontainer mt-0">
+          <h1>Login</h1>
+        </div>
+      
+        <div class="container">
+          <label for="uname"><b>Usuário</b></label>
+          <input type="text" placeholder="Usuário" name="uname" required>
+      
+          <label for="psw"><b>Senha</b></label>
+          <input type="password" placeholder="Senha" name="psw" required>
+      
+          <button type="submit" id="buttonlogin">Login</button>
+        </div>
+      </form>
+      
     </div>
-    <footer class="bg-light text-center text-lg-start">
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: #0c1020; color: white;">
-        Copyright © 2022 | Disciplina de Trabalho Interdisciplinar: Aplicações WEB | <b>PUC Minas Betim </b>| Mechanics Guide
-      </div>
-      <!-- Copyright -->
   </body>
 </html>
